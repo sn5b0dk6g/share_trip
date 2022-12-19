@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "userId": "user1",
+      "userImage": "",
+      "userName": "user1"
+    },
+    {
+      "userId": "user2",
+      "userImage": "",
+      "userName": "user2"
+    },
+    {
+      "userId": "user3",
+      "userImage": "",
+      "userName": "user3"
+    },
+    {
+      "userId": "user4",
+      "userImage": "",
+      "userName": "user4"
+    },
+    {
+      "userId": "user5",
+      "userImage": "",
+      "userName": "user5"
+    }
+  ]
+}

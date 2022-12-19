@@ -1,0 +1,23 @@
+{
+  "user": {
+    "userId": "user1",
+    "userImage": "lib/assets/img/sample/my_page/gamer.jpeg",
+    "userName": "GopherV"
+  },
+  "follow": 5,
+  "follower": 555,
+  "selfIntroduction": "Gopher（ゴーファー）とは、インターネットがテキストベース(文字情報主体)のネットワークであった1991年に、アメリカ合衆国のミネソタ大学が開発したテキストベースの情報検索システム。",
+  "myPageTabModel": {
+    "post": [],
+    "like": [
+      {
+        "planId": "00000001",
+        "planTitle": "【神奈川】心満ちる「箱根温泉」2泊3日旅！温泉と絶品そば尽くし",
+        "mainImage": "lib/assets/img/sample/home/timeLine1.jpeg",
+        "heartCnt": 109,
+        "userName": "user1"
+      }
+    ],
+    "download": []
+  }
+}

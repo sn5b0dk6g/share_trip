@@ -1,0 +1,177 @@
+{
+    "planTitle": "テーマは”食×女子旅”！草津温泉を120％楽しむための一泊二日プラン",
+    "mainImage": "lib/assets/img/sample/show_plan/main_image.jpeg",
+    "userImage": "lib/assets/img/sample/general/user.png",
+    "countryFlg": "0",
+    "mainPlace": "神奈川県",
+    "detailPlace": "箱根町",
+    "heartCnt": "6340",
+    "showPlanDetailModel" : {
+        "budget":"850000",
+        "numberOfPeople":2,
+        "vehicle":"",
+        "season":"11月",
+        "inOutFlg":"2"
+    },
+    "scheduleModel" : [
+        {
+            "day" : "1",
+            "dailyScheduleModel" : [
+                {
+                    "title": "箱根湯本駅に到着",
+                    "startTimeHM": "12:00",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "ウィステリアでランチ",
+                    "startTimeHM": "12:30",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"2000",
+                        "phoneNumber":"0460-85-6111",
+                        "url":"https://tabelog.com/kanagawa/A1410/A141001/14007811/",
+                        "memo":"予約不可"
+                    }
+                },
+                {
+                    "title": "吉池旅館で立ち寄り入浴",
+                    "startTimeHM": "14:30",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "ホテルにチェックイン",
+                    "startTimeHM": "17:00",
+                    "endTimeHM": "19:00",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                }
+            ]
+        },
+        {
+            "day" : "2",
+            "dailyScheduleModel" : [
+                {
+                    "title": "天成園で立ち寄り入浴とランチ",
+                    "startTimeHM": "11:00",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "パワースポットの「飛烟の瀧」で自然鑑賞",
+                    "startTimeHM": "14:30",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "須雲川沿いをお散歩",
+                    "startTimeHM": "15:30",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                }
+            ]
+        },
+        {
+            "day" : "3",
+            "dailyScheduleModel" : [
+                {
+                    "title": "箱根湯寮で立ち寄り入浴",
+                    "startTimeHM": "10:30",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "杣の栖でランチ",
+                    "startTimeHM": "12:30",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "温泉の神様とも呼ばれる「熊野神社」で参拝",
+                    "startTimeHM": "14:30",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "箱根温泉街散策とお土産購入",
+                    "startTimeHM": "15:00",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                },
+                {
+                    "title": "箱根湯本駅を出発",
+                    "startTimeHM": "17:00",
+                    "endTimeHM": "",
+                    "images": [],
+                    "detailDailyModel": {
+                        "budget":"",
+                        "phoneNumber":"",
+                        "url":"",
+                        "memo":""
+                    }
+                }
+            ]
+        }
+    ]
+}

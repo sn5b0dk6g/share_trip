@@ -1,0 +1,93 @@
+{
+    "slideShow": [
+        {
+            "planId": "00000007",
+            "planTitle": "テーマは”食×女子旅”！草津温泉を120％楽しむための一泊二日プラン",
+            "mainImage": "lib/assets/img/sample/home/slide1.jpeg"
+        },
+        {
+            "planId": "00000008",
+            "planTitle": "slideShow02",
+            "mainImage": "lib/assets/img/sample/home/slide2.jpeg"
+        },
+        {
+            "planId": "00000009",
+            "planTitle": "slideShowe03",
+            "mainImage": "lib/assets/img/sample/home/slide3.jpeg"
+        },
+        {
+            "planId": "00000010",
+            "planTitle": "slideShow04",
+            "mainImage": "lib/assets/img/sample/home/slide4.jpeg"
+        },
+        {
+            "planId": "00000011",
+            "planTitle": "slideShow05",
+            "mainImage": "lib/assets/img/sample/home/slide5.jpeg"
+        }
+    ],
+    "homeTabModel": {
+        "timeLine": [
+            {
+                "planId": "00000001",
+                "planTitle": "【神奈川】心満ちる「箱根温泉」2泊3日旅！温泉と絶品そば尽くし",
+                "mainImage": "lib/assets/img/sample/home/timeLine1.jpeg",
+                "heartCnt": 109,
+                "userName": "user1"
+            },
+            {
+                "planId": "00000002",
+                "planTitle": "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめも",
+                "mainImage": "",
+                "heartCnt": 73,
+                "userName": "user2"
+            },
+            {
+                "planId": "00000003",
+                "planTitle": "timeLine03",
+                "mainImage": "",
+                "heartCnt": 99999,
+                "userName": "user3"
+            }
+        ],
+        "followPlan": [
+            {
+                "planId": "00000004",
+                "planTitle": "followPlan01",
+                "mainImage": "",
+                "heartCnt": 9,
+                "userName": "user4"
+            },
+            {
+                "planId": "00000005",
+                "planTitle": "followPlan02",
+                "mainImage": "",
+                "heartCnt": 11,
+                "userName": "user5"
+            }
+        ],
+        "ranking": [
+            {
+                "planId": "00000012",
+                "planTitle": "ranking01",
+                "mainImage": "",
+                "heartCnt": 1000,
+                "userName": "user6"
+            },
+            {
+                "planId": "00000013",
+                "planTitle": "ranking02",
+                "mainImage": "",
+                "heartCnt": 875,
+                "userName": "user7"
+            },
+            {
+                "planId": "00000014",
+                "planTitle": "ranking03",
+                "mainImage": "",
+                "heartCnt": 573,
+                "userName": "user8"
+            }
+        ]
+    }
+}
