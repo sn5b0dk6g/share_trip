@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:share_trip/models/my_page/my_page_model.dart';
 import 'package:share_trip/state/provider.dart';
@@ -21,7 +22,7 @@ class EditProfilePage extends ConsumerWidget {
         title: const Text(Message.myPageTab),
         actions: <Widget>[
           SizedBox(
-            width: 70,
+            width: 70.w,
             child: TextButton(
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
@@ -40,7 +41,7 @@ class EditProfilePage extends ConsumerWidget {
           value: ref.watch(myPageViewModelProvider),
           viewWidget: (data) {
             return SingleChildScrollView(
-              padding: const EdgeInsets.all(40.0),
+              padding: REdgeInsets.all(40.0),
               child: Center(
                 child: Column(
                   children: [
@@ -49,10 +50,10 @@ class EditProfilePage extends ConsumerWidget {
                           data.user.userImage.toString())),
                       radius: 80,
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     OutlinedButton(onPressed: (() {}), child: const Text('変更')),
                     Container(
-                      padding: const EdgeInsets.only(top: 40),
+                      padding: const EdgeInsets.only(top: 40).r,
                       child: TextField(
                           onChanged: (value) {
                             userName = value;
@@ -63,7 +64,7 @@ class EditProfilePage extends ConsumerWidget {
                             labelText: 'ユーザー名',
                           )),
                     ),
-                    const Padding(padding: EdgeInsets.only(top: 40)),
+                    Padding(padding: const EdgeInsets.only(top: 40).r),
                     TextField(
                       onChanged: (value) {
                         selfIntroduction = value;

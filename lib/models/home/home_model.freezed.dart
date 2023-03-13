@@ -12,11 +12,31 @@ part of 'home_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 HomeModel _$HomeModelFromJson(Map<String, dynamic> json) {
   return _HomeModel.fromJson(json);
 }
+
+/// @nodoc
+class _$HomeModelTearOff {
+  const _$HomeModelTearOff();
+
+  _HomeModel call(
+      {List<SlideShowModel>? slideShow, HomeTabModel? homeTabModel}) {
+    return _HomeModel(
+      slideShow: slideShow,
+      homeTabModel: homeTabModel,
+    );
+  }
+
+  HomeModel fromJson(Map<String, Object?> json) {
+    return HomeModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $HomeModel = _$HomeModelTearOff();
 
 /// @nodoc
 mixin _$HomeModel {
@@ -32,61 +52,55 @@ mixin _$HomeModel {
 /// @nodoc
 abstract class $HomeModelCopyWith<$Res> {
   factory $HomeModelCopyWith(HomeModel value, $Res Function(HomeModel) then) =
-      _$HomeModelCopyWithImpl<$Res, HomeModel>;
-  @useResult
+      _$HomeModelCopyWithImpl<$Res>;
   $Res call({List<SlideShowModel>? slideShow, HomeTabModel? homeTabModel});
 
   $HomeTabModelCopyWith<$Res>? get homeTabModel;
 }
 
 /// @nodoc
-class _$HomeModelCopyWithImpl<$Res, $Val extends HomeModel>
-    implements $HomeModelCopyWith<$Res> {
+class _$HomeModelCopyWithImpl<$Res> implements $HomeModelCopyWith<$Res> {
   _$HomeModelCopyWithImpl(this._value, this._then);
 
+  final HomeModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(HomeModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? slideShow = freezed,
     Object? homeTabModel = freezed,
   }) {
     return _then(_value.copyWith(
-      slideShow: freezed == slideShow
+      slideShow: slideShow == freezed
           ? _value.slideShow
           : slideShow // ignore: cast_nullable_to_non_nullable
               as List<SlideShowModel>?,
-      homeTabModel: freezed == homeTabModel
+      homeTabModel: homeTabModel == freezed
           ? _value.homeTabModel
           : homeTabModel // ignore: cast_nullable_to_non_nullable
               as HomeTabModel?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $HomeTabModelCopyWith<$Res>? get homeTabModel {
     if (_value.homeTabModel == null) {
       return null;
     }
 
     return $HomeTabModelCopyWith<$Res>(_value.homeTabModel!, (value) {
-      return _then(_value.copyWith(homeTabModel: value) as $Val);
+      return _then(_value.copyWith(homeTabModel: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_HomeModelCopyWith<$Res> implements $HomeModelCopyWith<$Res> {
-  factory _$$_HomeModelCopyWith(
-          _$_HomeModel value, $Res Function(_$_HomeModel) then) =
-      __$$_HomeModelCopyWithImpl<$Res>;
+abstract class _$HomeModelCopyWith<$Res> implements $HomeModelCopyWith<$Res> {
+  factory _$HomeModelCopyWith(
+          _HomeModel value, $Res Function(_HomeModel) then) =
+      __$HomeModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({List<SlideShowModel>? slideShow, HomeTabModel? homeTabModel});
 
   @override
@@ -94,25 +108,25 @@ abstract class _$$_HomeModelCopyWith<$Res> implements $HomeModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_HomeModelCopyWithImpl<$Res>
-    extends _$HomeModelCopyWithImpl<$Res, _$_HomeModel>
-    implements _$$_HomeModelCopyWith<$Res> {
-  __$$_HomeModelCopyWithImpl(
-      _$_HomeModel _value, $Res Function(_$_HomeModel) _then)
-      : super(_value, _then);
+class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
+    implements _$HomeModelCopyWith<$Res> {
+  __$HomeModelCopyWithImpl(_HomeModel _value, $Res Function(_HomeModel) _then)
+      : super(_value, (v) => _then(v as _HomeModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _HomeModel get _value => super._value as _HomeModel;
+
   @override
   $Res call({
     Object? slideShow = freezed,
     Object? homeTabModel = freezed,
   }) {
-    return _then(_$_HomeModel(
-      slideShow: freezed == slideShow
-          ? _value._slideShow
+    return _then(_HomeModel(
+      slideShow: slideShow == freezed
+          ? _value.slideShow
           : slideShow // ignore: cast_nullable_to_non_nullable
               as List<SlideShowModel>?,
-      homeTabModel: freezed == homeTabModel
+      homeTabModel: homeTabModel == freezed
           ? _value.homeTabModel
           : homeTabModel // ignore: cast_nullable_to_non_nullable
               as HomeTabModel?,
@@ -123,21 +137,13 @@ class __$$_HomeModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HomeModel with DiagnosticableTreeMixin implements _HomeModel {
-  const _$_HomeModel({final List<SlideShowModel>? slideShow, this.homeTabModel})
-      : _slideShow = slideShow;
+  const _$_HomeModel({this.slideShow, this.homeTabModel});
 
   factory _$_HomeModel.fromJson(Map<String, dynamic> json) =>
       _$$_HomeModelFromJson(json);
 
-  final List<SlideShowModel>? _slideShow;
   @override
-  List<SlideShowModel>? get slideShow {
-    final value = _slideShow;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<SlideShowModel>? slideShow;
   @override
   final HomeTabModel? homeTabModel;
 
@@ -159,36 +165,33 @@ class _$_HomeModel with DiagnosticableTreeMixin implements _HomeModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomeModel &&
+            other is _HomeModel &&
+            const DeepCollectionEquality().equals(other.slideShow, slideShow) &&
             const DeepCollectionEquality()
-                .equals(other._slideShow, _slideShow) &&
-            (identical(other.homeTabModel, homeTabModel) ||
-                other.homeTabModel == homeTabModel));
+                .equals(other.homeTabModel, homeTabModel));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_slideShow), homeTabModel);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(slideShow),
+      const DeepCollectionEquality().hash(homeTabModel));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_HomeModelCopyWith<_$_HomeModel> get copyWith =>
-      __$$_HomeModelCopyWithImpl<_$_HomeModel>(this, _$identity);
+  _$HomeModelCopyWith<_HomeModel> get copyWith =>
+      __$HomeModelCopyWithImpl<_HomeModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomeModelToJson(
-      this,
-    );
+    return _$$_HomeModelToJson(this);
   }
 }
 
 abstract class _HomeModel implements HomeModel {
   const factory _HomeModel(
-      {final List<SlideShowModel>? slideShow,
-      final HomeTabModel? homeTabModel}) = _$_HomeModel;
+      {List<SlideShowModel>? slideShow,
+      HomeTabModel? homeTabModel}) = _$_HomeModel;
 
   factory _HomeModel.fromJson(Map<String, dynamic> json) =
       _$_HomeModel.fromJson;
@@ -199,6 +202,6 @@ abstract class _HomeModel implements HomeModel {
   HomeTabModel? get homeTabModel;
   @override
   @JsonKey(ignore: true)
-  _$$_HomeModelCopyWith<_$_HomeModel> get copyWith =>
+  _$HomeModelCopyWith<_HomeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

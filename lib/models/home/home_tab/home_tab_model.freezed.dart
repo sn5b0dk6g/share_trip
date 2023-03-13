@@ -12,11 +12,34 @@ part of 'home_tab_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 HomeTabModel _$HomeTabModelFromJson(Map<String, dynamic> json) {
   return _HomeTabModel.fromJson(json);
 }
+
+/// @nodoc
+class _$HomeTabModelTearOff {
+  const _$HomeTabModelTearOff();
+
+  _HomeTabModel call(
+      {List<TabToListModel>? timeLine,
+      List<TabToListModel>? followPlan,
+      List<TabToListModel>? ranking}) {
+    return _HomeTabModel(
+      timeLine: timeLine,
+      followPlan: followPlan,
+      ranking: ranking,
+    );
+  }
+
+  HomeTabModel fromJson(Map<String, Object?> json) {
+    return HomeTabModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $HomeTabModel = _$HomeTabModelTearOff();
 
 /// @nodoc
 mixin _$HomeTabModel {
@@ -34,8 +57,7 @@ mixin _$HomeTabModel {
 abstract class $HomeTabModelCopyWith<$Res> {
   factory $HomeTabModelCopyWith(
           HomeTabModel value, $Res Function(HomeTabModel) then) =
-      _$HomeTabModelCopyWithImpl<$Res, HomeTabModel>;
-  @useResult
+      _$HomeTabModelCopyWithImpl<$Res>;
   $Res call(
       {List<TabToListModel>? timeLine,
       List<TabToListModel>? followPlan,
@@ -43,16 +65,13 @@ abstract class $HomeTabModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$HomeTabModelCopyWithImpl<$Res, $Val extends HomeTabModel>
-    implements $HomeTabModelCopyWith<$Res> {
+class _$HomeTabModelCopyWithImpl<$Res> implements $HomeTabModelCopyWith<$Res> {
   _$HomeTabModelCopyWithImpl(this._value, this._then);
 
+  final HomeTabModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(HomeTabModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? timeLine = freezed,
@@ -60,30 +79,29 @@ class _$HomeTabModelCopyWithImpl<$Res, $Val extends HomeTabModel>
     Object? ranking = freezed,
   }) {
     return _then(_value.copyWith(
-      timeLine: freezed == timeLine
+      timeLine: timeLine == freezed
           ? _value.timeLine
           : timeLine // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      followPlan: freezed == followPlan
+      followPlan: followPlan == freezed
           ? _value.followPlan
           : followPlan // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      ranking: freezed == ranking
+      ranking: ranking == freezed
           ? _value.ranking
           : ranking // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-    ) as $Val);
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$_HomeTabModelCopyWith<$Res>
+abstract class _$HomeTabModelCopyWith<$Res>
     implements $HomeTabModelCopyWith<$Res> {
-  factory _$$_HomeTabModelCopyWith(
-          _$_HomeTabModel value, $Res Function(_$_HomeTabModel) then) =
-      __$$_HomeTabModelCopyWithImpl<$Res>;
+  factory _$HomeTabModelCopyWith(
+          _HomeTabModel value, $Res Function(_HomeTabModel) then) =
+      __$HomeTabModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {List<TabToListModel>? timeLine,
       List<TabToListModel>? followPlan,
@@ -91,31 +109,32 @@ abstract class _$$_HomeTabModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_HomeTabModelCopyWithImpl<$Res>
-    extends _$HomeTabModelCopyWithImpl<$Res, _$_HomeTabModel>
-    implements _$$_HomeTabModelCopyWith<$Res> {
-  __$$_HomeTabModelCopyWithImpl(
-      _$_HomeTabModel _value, $Res Function(_$_HomeTabModel) _then)
-      : super(_value, _then);
+class __$HomeTabModelCopyWithImpl<$Res> extends _$HomeTabModelCopyWithImpl<$Res>
+    implements _$HomeTabModelCopyWith<$Res> {
+  __$HomeTabModelCopyWithImpl(
+      _HomeTabModel _value, $Res Function(_HomeTabModel) _then)
+      : super(_value, (v) => _then(v as _HomeTabModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _HomeTabModel get _value => super._value as _HomeTabModel;
+
   @override
   $Res call({
     Object? timeLine = freezed,
     Object? followPlan = freezed,
     Object? ranking = freezed,
   }) {
-    return _then(_$_HomeTabModel(
-      timeLine: freezed == timeLine
-          ? _value._timeLine
+    return _then(_HomeTabModel(
+      timeLine: timeLine == freezed
+          ? _value.timeLine
           : timeLine // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      followPlan: freezed == followPlan
-          ? _value._followPlan
+      followPlan: followPlan == freezed
+          ? _value.followPlan
           : followPlan // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      ranking: freezed == ranking
-          ? _value._ranking
+      ranking: ranking == freezed
+          ? _value.ranking
           : ranking // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
     ));
@@ -125,43 +144,17 @@ class __$$_HomeTabModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_HomeTabModel with DiagnosticableTreeMixin implements _HomeTabModel {
-  const _$_HomeTabModel(
-      {final List<TabToListModel>? timeLine,
-      final List<TabToListModel>? followPlan,
-      final List<TabToListModel>? ranking})
-      : _timeLine = timeLine,
-        _followPlan = followPlan,
-        _ranking = ranking;
+  const _$_HomeTabModel({this.timeLine, this.followPlan, this.ranking});
 
   factory _$_HomeTabModel.fromJson(Map<String, dynamic> json) =>
       _$$_HomeTabModelFromJson(json);
 
-  final List<TabToListModel>? _timeLine;
   @override
-  List<TabToListModel>? get timeLine {
-    final value = _timeLine;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<TabToListModel>? _followPlan;
+  final List<TabToListModel>? timeLine;
   @override
-  List<TabToListModel>? get followPlan {
-    final value = _followPlan;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<TabToListModel>? _ranking;
+  final List<TabToListModel>? followPlan;
   @override
-  List<TabToListModel>? get ranking {
-    final value = _ranking;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<TabToListModel>? ranking;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -182,40 +175,36 @@ class _$_HomeTabModel with DiagnosticableTreeMixin implements _HomeTabModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomeTabModel &&
-            const DeepCollectionEquality().equals(other._timeLine, _timeLine) &&
+            other is _HomeTabModel &&
+            const DeepCollectionEquality().equals(other.timeLine, timeLine) &&
             const DeepCollectionEquality()
-                .equals(other._followPlan, _followPlan) &&
-            const DeepCollectionEquality().equals(other._ranking, _ranking));
+                .equals(other.followPlan, followPlan) &&
+            const DeepCollectionEquality().equals(other.ranking, ranking));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_timeLine),
-      const DeepCollectionEquality().hash(_followPlan),
-      const DeepCollectionEquality().hash(_ranking));
+      const DeepCollectionEquality().hash(timeLine),
+      const DeepCollectionEquality().hash(followPlan),
+      const DeepCollectionEquality().hash(ranking));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_HomeTabModelCopyWith<_$_HomeTabModel> get copyWith =>
-      __$$_HomeTabModelCopyWithImpl<_$_HomeTabModel>(this, _$identity);
+  _$HomeTabModelCopyWith<_HomeTabModel> get copyWith =>
+      __$HomeTabModelCopyWithImpl<_HomeTabModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomeTabModelToJson(
-      this,
-    );
+    return _$$_HomeTabModelToJson(this);
   }
 }
 
 abstract class _HomeTabModel implements HomeTabModel {
   const factory _HomeTabModel(
-      {final List<TabToListModel>? timeLine,
-      final List<TabToListModel>? followPlan,
-      final List<TabToListModel>? ranking}) = _$_HomeTabModel;
+      {List<TabToListModel>? timeLine,
+      List<TabToListModel>? followPlan,
+      List<TabToListModel>? ranking}) = _$_HomeTabModel;
 
   factory _HomeTabModel.fromJson(Map<String, dynamic> json) =
       _$_HomeTabModel.fromJson;
@@ -228,6 +217,6 @@ abstract class _HomeTabModel implements HomeTabModel {
   List<TabToListModel>? get ranking;
   @override
   @JsonKey(ignore: true)
-  _$$_HomeTabModelCopyWith<_$_HomeTabModel> get copyWith =>
+  _$HomeTabModelCopyWith<_HomeTabModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

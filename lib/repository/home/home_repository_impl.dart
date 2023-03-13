@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:share_trip/models/home/home_model.dart';
 import 'package:share_trip/models/home/home_tab/home_tab_model.dart';
-import 'package:share_trip/models/result/result.dart';
 import 'package:share_trip/repository/home/home_repository.dart';
 import 'package:share_trip/utils/common_util.dart';
 

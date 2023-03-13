@@ -12,11 +12,32 @@ part of 'slide_show_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SlideShowModel _$SlideShowModelFromJson(Map<String, dynamic> json) {
   return _SlideShowModel.fromJson(json);
 }
+
+/// @nodoc
+class _$SlideShowModelTearOff {
+  const _$SlideShowModelTearOff();
+
+  _SlideShowModel call(
+      {required String planId, String? mainImage, required String planTitle}) {
+    return _SlideShowModel(
+      planId: planId,
+      mainImage: mainImage,
+      planTitle: planTitle,
+    );
+  }
+
+  SlideShowModel fromJson(Map<String, Object?> json) {
+    return SlideShowModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $SlideShowModel = _$SlideShowModelTearOff();
 
 /// @nodoc
 mixin _$SlideShowModel {
@@ -34,81 +55,79 @@ mixin _$SlideShowModel {
 abstract class $SlideShowModelCopyWith<$Res> {
   factory $SlideShowModelCopyWith(
           SlideShowModel value, $Res Function(SlideShowModel) then) =
-      _$SlideShowModelCopyWithImpl<$Res, SlideShowModel>;
-  @useResult
+      _$SlideShowModelCopyWithImpl<$Res>;
   $Res call({String planId, String? mainImage, String planTitle});
 }
 
 /// @nodoc
-class _$SlideShowModelCopyWithImpl<$Res, $Val extends SlideShowModel>
+class _$SlideShowModelCopyWithImpl<$Res>
     implements $SlideShowModelCopyWith<$Res> {
   _$SlideShowModelCopyWithImpl(this._value, this._then);
 
+  final SlideShowModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(SlideShowModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? planId = null,
+    Object? planId = freezed,
     Object? mainImage = freezed,
-    Object? planTitle = null,
+    Object? planTitle = freezed,
   }) {
     return _then(_value.copyWith(
-      planId: null == planId
+      planId: planId == freezed
           ? _value.planId
           : planId // ignore: cast_nullable_to_non_nullable
               as String,
-      mainImage: freezed == mainImage
+      mainImage: mainImage == freezed
           ? _value.mainImage
           : mainImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      planTitle: null == planTitle
+      planTitle: planTitle == freezed
           ? _value.planTitle
           : planTitle // ignore: cast_nullable_to_non_nullable
               as String,
-    ) as $Val);
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$_SlideShowModelCopyWith<$Res>
+abstract class _$SlideShowModelCopyWith<$Res>
     implements $SlideShowModelCopyWith<$Res> {
-  factory _$$_SlideShowModelCopyWith(
-          _$_SlideShowModel value, $Res Function(_$_SlideShowModel) then) =
-      __$$_SlideShowModelCopyWithImpl<$Res>;
+  factory _$SlideShowModelCopyWith(
+          _SlideShowModel value, $Res Function(_SlideShowModel) then) =
+      __$SlideShowModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({String planId, String? mainImage, String planTitle});
 }
 
 /// @nodoc
-class __$$_SlideShowModelCopyWithImpl<$Res>
-    extends _$SlideShowModelCopyWithImpl<$Res, _$_SlideShowModel>
-    implements _$$_SlideShowModelCopyWith<$Res> {
-  __$$_SlideShowModelCopyWithImpl(
-      _$_SlideShowModel _value, $Res Function(_$_SlideShowModel) _then)
-      : super(_value, _then);
+class __$SlideShowModelCopyWithImpl<$Res>
+    extends _$SlideShowModelCopyWithImpl<$Res>
+    implements _$SlideShowModelCopyWith<$Res> {
+  __$SlideShowModelCopyWithImpl(
+      _SlideShowModel _value, $Res Function(_SlideShowModel) _then)
+      : super(_value, (v) => _then(v as _SlideShowModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _SlideShowModel get _value => super._value as _SlideShowModel;
+
   @override
   $Res call({
-    Object? planId = null,
+    Object? planId = freezed,
     Object? mainImage = freezed,
-    Object? planTitle = null,
+    Object? planTitle = freezed,
   }) {
-    return _then(_$_SlideShowModel(
-      planId: null == planId
+    return _then(_SlideShowModel(
+      planId: planId == freezed
           ? _value.planId
           : planId // ignore: cast_nullable_to_non_nullable
               as String,
-      mainImage: freezed == mainImage
+      mainImage: mainImage == freezed
           ? _value.mainImage
           : mainImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      planTitle: null == planTitle
+      planTitle: planTitle == freezed
           ? _value.planTitle
           : planTitle // ignore: cast_nullable_to_non_nullable
               as String,
@@ -154,37 +173,35 @@ class _$_SlideShowModel
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SlideShowModel &&
-            (identical(other.planId, planId) || other.planId == planId) &&
-            (identical(other.mainImage, mainImage) ||
-                other.mainImage == mainImage) &&
-            (identical(other.planTitle, planTitle) ||
-                other.planTitle == planTitle));
+            other is _SlideShowModel &&
+            const DeepCollectionEquality().equals(other.planId, planId) &&
+            const DeepCollectionEquality().equals(other.mainImage, mainImage) &&
+            const DeepCollectionEquality().equals(other.planTitle, planTitle));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, planId, mainImage, planTitle);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(planId),
+      const DeepCollectionEquality().hash(mainImage),
+      const DeepCollectionEquality().hash(planTitle));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_SlideShowModelCopyWith<_$_SlideShowModel> get copyWith =>
-      __$$_SlideShowModelCopyWithImpl<_$_SlideShowModel>(this, _$identity);
+  _$SlideShowModelCopyWith<_SlideShowModel> get copyWith =>
+      __$SlideShowModelCopyWithImpl<_SlideShowModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SlideShowModelToJson(
-      this,
-    );
+    return _$$_SlideShowModelToJson(this);
   }
 }
 
 abstract class _SlideShowModel implements SlideShowModel {
   const factory _SlideShowModel(
-      {required final String planId,
-      final String? mainImage,
-      required final String planTitle}) = _$_SlideShowModel;
+      {required String planId,
+      String? mainImage,
+      required String planTitle}) = _$_SlideShowModel;
 
   factory _SlideShowModel.fromJson(Map<String, dynamic> json) =
       _$_SlideShowModel.fromJson;
@@ -197,6 +214,6 @@ abstract class _SlideShowModel implements SlideShowModel {
   String get planTitle;
   @override
   @JsonKey(ignore: true)
-  _$$_SlideShowModelCopyWith<_$_SlideShowModel> get copyWith =>
+  _$SlideShowModelCopyWith<_SlideShowModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

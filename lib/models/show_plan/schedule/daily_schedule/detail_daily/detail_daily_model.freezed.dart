@@ -12,11 +12,33 @@ part of 'detail_daily_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DetailDailyModel _$DetailDailyModelFromJson(Map<String, dynamic> json) {
   return _DetailDailyModel.fromJson(json);
 }
+
+/// @nodoc
+class _$DetailDailyModelTearOff {
+  const _$DetailDailyModelTearOff();
+
+  _DetailDailyModel call(
+      {String? budget, String? phoneNumber, String? url, String? memo}) {
+    return _DetailDailyModel(
+      budget: budget,
+      phoneNumber: phoneNumber,
+      url: url,
+      memo: memo,
+    );
+  }
+
+  DetailDailyModel fromJson(Map<String, Object?> json) {
+    return DetailDailyModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DetailDailyModel = _$DetailDailyModelTearOff();
 
 /// @nodoc
 mixin _$DetailDailyModel {
@@ -35,22 +57,19 @@ mixin _$DetailDailyModel {
 abstract class $DetailDailyModelCopyWith<$Res> {
   factory $DetailDailyModelCopyWith(
           DetailDailyModel value, $Res Function(DetailDailyModel) then) =
-      _$DetailDailyModelCopyWithImpl<$Res, DetailDailyModel>;
-  @useResult
+      _$DetailDailyModelCopyWithImpl<$Res>;
   $Res call({String? budget, String? phoneNumber, String? url, String? memo});
 }
 
 /// @nodoc
-class _$DetailDailyModelCopyWithImpl<$Res, $Val extends DetailDailyModel>
+class _$DetailDailyModelCopyWithImpl<$Res>
     implements $DetailDailyModelCopyWith<$Res> {
   _$DetailDailyModelCopyWithImpl(this._value, this._then);
 
+  final DetailDailyModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(DetailDailyModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? budget = freezed,
@@ -59,46 +78,47 @@ class _$DetailDailyModelCopyWithImpl<$Res, $Val extends DetailDailyModel>
     Object? memo = freezed,
   }) {
     return _then(_value.copyWith(
-      budget: freezed == budget
+      budget: budget == freezed
           ? _value.budget
           : budget // ignore: cast_nullable_to_non_nullable
               as String?,
-      phoneNumber: freezed == phoneNumber
+      phoneNumber: phoneNumber == freezed
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: freezed == url
+      url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      memo: freezed == memo
+      memo: memo == freezed
           ? _value.memo
           : memo // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$_DetailDailyModelCopyWith<$Res>
+abstract class _$DetailDailyModelCopyWith<$Res>
     implements $DetailDailyModelCopyWith<$Res> {
-  factory _$$_DetailDailyModelCopyWith(
-          _$_DetailDailyModel value, $Res Function(_$_DetailDailyModel) then) =
-      __$$_DetailDailyModelCopyWithImpl<$Res>;
+  factory _$DetailDailyModelCopyWith(
+          _DetailDailyModel value, $Res Function(_DetailDailyModel) then) =
+      __$DetailDailyModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({String? budget, String? phoneNumber, String? url, String? memo});
 }
 
 /// @nodoc
-class __$$_DetailDailyModelCopyWithImpl<$Res>
-    extends _$DetailDailyModelCopyWithImpl<$Res, _$_DetailDailyModel>
-    implements _$$_DetailDailyModelCopyWith<$Res> {
-  __$$_DetailDailyModelCopyWithImpl(
-      _$_DetailDailyModel _value, $Res Function(_$_DetailDailyModel) _then)
-      : super(_value, _then);
+class __$DetailDailyModelCopyWithImpl<$Res>
+    extends _$DetailDailyModelCopyWithImpl<$Res>
+    implements _$DetailDailyModelCopyWith<$Res> {
+  __$DetailDailyModelCopyWithImpl(
+      _DetailDailyModel _value, $Res Function(_DetailDailyModel) _then)
+      : super(_value, (v) => _then(v as _DetailDailyModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _DetailDailyModel get _value => super._value as _DetailDailyModel;
+
   @override
   $Res call({
     Object? budget = freezed,
@@ -106,20 +126,20 @@ class __$$_DetailDailyModelCopyWithImpl<$Res>
     Object? url = freezed,
     Object? memo = freezed,
   }) {
-    return _then(_$_DetailDailyModel(
-      budget: freezed == budget
+    return _then(_DetailDailyModel(
+      budget: budget == freezed
           ? _value.budget
           : budget // ignore: cast_nullable_to_non_nullable
               as String?,
-      phoneNumber: freezed == phoneNumber
+      phoneNumber: phoneNumber == freezed
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: freezed == url
+      url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      memo: freezed == memo
+      memo: memo == freezed
           ? _value.memo
           : memo // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -154,38 +174,39 @@ class _$_DetailDailyModel implements _DetailDailyModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DetailDailyModel &&
-            (identical(other.budget, budget) || other.budget == budget) &&
-            (identical(other.phoneNumber, phoneNumber) ||
-                other.phoneNumber == phoneNumber) &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.memo, memo) || other.memo == memo));
+            other is _DetailDailyModel &&
+            const DeepCollectionEquality().equals(other.budget, budget) &&
+            const DeepCollectionEquality()
+                .equals(other.phoneNumber, phoneNumber) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality().equals(other.memo, memo));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, budget, phoneNumber, url, memo);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(budget),
+      const DeepCollectionEquality().hash(phoneNumber),
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(memo));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_DetailDailyModelCopyWith<_$_DetailDailyModel> get copyWith =>
-      __$$_DetailDailyModelCopyWithImpl<_$_DetailDailyModel>(this, _$identity);
+  _$DetailDailyModelCopyWith<_DetailDailyModel> get copyWith =>
+      __$DetailDailyModelCopyWithImpl<_DetailDailyModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DetailDailyModelToJson(
-      this,
-    );
+    return _$$_DetailDailyModelToJson(this);
   }
 }
 
 abstract class _DetailDailyModel implements DetailDailyModel {
   const factory _DetailDailyModel(
-      {final String? budget,
-      final String? phoneNumber,
-      final String? url,
-      final String? memo}) = _$_DetailDailyModel;
+      {String? budget,
+      String? phoneNumber,
+      String? url,
+      String? memo}) = _$_DetailDailyModel;
 
   factory _DetailDailyModel.fromJson(Map<String, dynamic> json) =
       _$_DetailDailyModel.fromJson;
@@ -200,6 +221,6 @@ abstract class _DetailDailyModel implements DetailDailyModel {
   String? get memo;
   @override
   @JsonKey(ignore: true)
-  _$$_DetailDailyModelCopyWith<_$_DetailDailyModel> get copyWith =>
+  _$DetailDailyModelCopyWith<_DetailDailyModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

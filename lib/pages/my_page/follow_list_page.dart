@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_trip/models/common/user/user_model.dart';
 import 'package:share_trip/state/provider.dart';
 import 'package:share_trip/utils/common_util.dart';
@@ -26,7 +27,7 @@ class FollowListPage extends ConsumerWidget {
         height: MediaQuery.of(context).size.height,
         child: Column(
           children: <Widget>[
-            const SizedBox(height: 50,),
+            SizedBox(height: 50.h,),
             FollowWidget(initialIndex: initialIndex,)
           ],
         ),
@@ -53,14 +54,14 @@ class FollowWidget extends ConsumerWidget {
     followPageTabContents.add(buildListViewWidget(ref, Message.followersTab));
 
     return TabToListWidget(
-      tabs, followPageTabContents, initialIndex: initialIndex, height: 600.0,);
+      tabs, followPageTabContents, initialIndex: initialIndex, height: 600.0.h,);
   }
 
   ListViewWidget buildListViewWidget(WidgetRef ref, String tabName) {
     return ListViewWidget<UserModel, UserModel>(
-      asyncValueList: ref.watch(followPageFutureProvider(tabName)),
+      asyncValueList: ref.watch(followListFutureProvider(tabName)),
       viewWidget: (item) => FollowUserWidget(item: item),
-      separatorHeight: 1.0,
+      separatorHeight: 1.0.h,
     );
   }
 }
@@ -77,30 +78,30 @@ class FollowUserWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 90.0,
+      height: 90.0.h,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 80,
-            width: 80,
-            padding: const EdgeInsets.only(top: 10, left: 8),
+            height: 80.h,
+            width: 80.w,
+            padding: const EdgeInsets.only(top: 10, left: 8).r,
             child: CircleAvatar(
               backgroundImage: AssetImage(CommonUtil.insertMainImg(
                 item.userImage.toString(),
               )),
-              radius: 50,
+              radius: 50.r,
             ),
           ),
           Expanded(
               child: Container(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 10).r,
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     item.userName.toString(),
-                    style: const TextStyle(
-                      fontSize: 20,
+                    style: TextStyle(
+                      fontSize: 20.sp,
                     ),
                   ),
                 ),

@@ -12,11 +12,38 @@ part of 'show_plan_detail_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ShowPlanDetailModel _$ShowPlanDetailModelFromJson(Map<String, dynamic> json) {
   return _ShowPlanDetailModel.fromJson(json);
 }
+
+/// @nodoc
+class _$ShowPlanDetailModelTearOff {
+  const _$ShowPlanDetailModelTearOff();
+
+  _ShowPlanDetailModel call(
+      {String? budget,
+      int? numberOfPeople,
+      String? vehicle,
+      String? season,
+      String? inOutFlg}) {
+    return _ShowPlanDetailModel(
+      budget: budget,
+      numberOfPeople: numberOfPeople,
+      vehicle: vehicle,
+      season: season,
+      inOutFlg: inOutFlg,
+    );
+  }
+
+  ShowPlanDetailModel fromJson(Map<String, Object?> json) {
+    return ShowPlanDetailModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ShowPlanDetailModel = _$ShowPlanDetailModelTearOff();
 
 /// @nodoc
 mixin _$ShowPlanDetailModel {
@@ -36,8 +63,7 @@ mixin _$ShowPlanDetailModel {
 abstract class $ShowPlanDetailModelCopyWith<$Res> {
   factory $ShowPlanDetailModelCopyWith(
           ShowPlanDetailModel value, $Res Function(ShowPlanDetailModel) then) =
-      _$ShowPlanDetailModelCopyWithImpl<$Res, ShowPlanDetailModel>;
-  @useResult
+      _$ShowPlanDetailModelCopyWithImpl<$Res>;
   $Res call(
       {String? budget,
       int? numberOfPeople,
@@ -47,16 +73,14 @@ abstract class $ShowPlanDetailModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ShowPlanDetailModelCopyWithImpl<$Res, $Val extends ShowPlanDetailModel>
+class _$ShowPlanDetailModelCopyWithImpl<$Res>
     implements $ShowPlanDetailModelCopyWith<$Res> {
   _$ShowPlanDetailModelCopyWithImpl(this._value, this._then);
 
+  final ShowPlanDetailModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ShowPlanDetailModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? budget = freezed,
@@ -66,38 +90,37 @@ class _$ShowPlanDetailModelCopyWithImpl<$Res, $Val extends ShowPlanDetailModel>
     Object? inOutFlg = freezed,
   }) {
     return _then(_value.copyWith(
-      budget: freezed == budget
+      budget: budget == freezed
           ? _value.budget
           : budget // ignore: cast_nullable_to_non_nullable
               as String?,
-      numberOfPeople: freezed == numberOfPeople
+      numberOfPeople: numberOfPeople == freezed
           ? _value.numberOfPeople
           : numberOfPeople // ignore: cast_nullable_to_non_nullable
               as int?,
-      vehicle: freezed == vehicle
+      vehicle: vehicle == freezed
           ? _value.vehicle
           : vehicle // ignore: cast_nullable_to_non_nullable
               as String?,
-      season: freezed == season
+      season: season == freezed
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
               as String?,
-      inOutFlg: freezed == inOutFlg
+      inOutFlg: inOutFlg == freezed
           ? _value.inOutFlg
           : inOutFlg // ignore: cast_nullable_to_non_nullable
               as String?,
-    ) as $Val);
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$_ShowPlanDetailModelCopyWith<$Res>
+abstract class _$ShowPlanDetailModelCopyWith<$Res>
     implements $ShowPlanDetailModelCopyWith<$Res> {
-  factory _$$_ShowPlanDetailModelCopyWith(_$_ShowPlanDetailModel value,
-          $Res Function(_$_ShowPlanDetailModel) then) =
-      __$$_ShowPlanDetailModelCopyWithImpl<$Res>;
+  factory _$ShowPlanDetailModelCopyWith(_ShowPlanDetailModel value,
+          $Res Function(_ShowPlanDetailModel) then) =
+      __$ShowPlanDetailModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {String? budget,
       int? numberOfPeople,
@@ -107,14 +130,16 @@ abstract class _$$_ShowPlanDetailModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ShowPlanDetailModelCopyWithImpl<$Res>
-    extends _$ShowPlanDetailModelCopyWithImpl<$Res, _$_ShowPlanDetailModel>
-    implements _$$_ShowPlanDetailModelCopyWith<$Res> {
-  __$$_ShowPlanDetailModelCopyWithImpl(_$_ShowPlanDetailModel _value,
-      $Res Function(_$_ShowPlanDetailModel) _then)
-      : super(_value, _then);
+class __$ShowPlanDetailModelCopyWithImpl<$Res>
+    extends _$ShowPlanDetailModelCopyWithImpl<$Res>
+    implements _$ShowPlanDetailModelCopyWith<$Res> {
+  __$ShowPlanDetailModelCopyWithImpl(
+      _ShowPlanDetailModel _value, $Res Function(_ShowPlanDetailModel) _then)
+      : super(_value, (v) => _then(v as _ShowPlanDetailModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _ShowPlanDetailModel get _value => super._value as _ShowPlanDetailModel;
+
   @override
   $Res call({
     Object? budget = freezed,
@@ -123,24 +148,24 @@ class __$$_ShowPlanDetailModelCopyWithImpl<$Res>
     Object? season = freezed,
     Object? inOutFlg = freezed,
   }) {
-    return _then(_$_ShowPlanDetailModel(
-      budget: freezed == budget
+    return _then(_ShowPlanDetailModel(
+      budget: budget == freezed
           ? _value.budget
           : budget // ignore: cast_nullable_to_non_nullable
               as String?,
-      numberOfPeople: freezed == numberOfPeople
+      numberOfPeople: numberOfPeople == freezed
           ? _value.numberOfPeople
           : numberOfPeople // ignore: cast_nullable_to_non_nullable
               as int?,
-      vehicle: freezed == vehicle
+      vehicle: vehicle == freezed
           ? _value.vehicle
           : vehicle // ignore: cast_nullable_to_non_nullable
               as String?,
-      season: freezed == season
+      season: season == freezed
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
               as String?,
-      inOutFlg: freezed == inOutFlg
+      inOutFlg: inOutFlg == freezed
           ? _value.inOutFlg
           : inOutFlg // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -169,8 +194,7 @@ class _$_ShowPlanDetailModel implements _ShowPlanDetailModel {
   final String? vehicle;
   @override
   final String? season;
-// 0:両方,1:屋内,2:屋外
-  @override
+  @override // 0:両方,1:屋内,2:屋外
   final String? inOutFlg;
 
   @override
@@ -182,43 +206,43 @@ class _$_ShowPlanDetailModel implements _ShowPlanDetailModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShowPlanDetailModel &&
-            (identical(other.budget, budget) || other.budget == budget) &&
-            (identical(other.numberOfPeople, numberOfPeople) ||
-                other.numberOfPeople == numberOfPeople) &&
-            (identical(other.vehicle, vehicle) || other.vehicle == vehicle) &&
-            (identical(other.season, season) || other.season == season) &&
-            (identical(other.inOutFlg, inOutFlg) ||
-                other.inOutFlg == inOutFlg));
+            other is _ShowPlanDetailModel &&
+            const DeepCollectionEquality().equals(other.budget, budget) &&
+            const DeepCollectionEquality()
+                .equals(other.numberOfPeople, numberOfPeople) &&
+            const DeepCollectionEquality().equals(other.vehicle, vehicle) &&
+            const DeepCollectionEquality().equals(other.season, season) &&
+            const DeepCollectionEquality().equals(other.inOutFlg, inOutFlg));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, budget, numberOfPeople, vehicle, season, inOutFlg);
+      runtimeType,
+      const DeepCollectionEquality().hash(budget),
+      const DeepCollectionEquality().hash(numberOfPeople),
+      const DeepCollectionEquality().hash(vehicle),
+      const DeepCollectionEquality().hash(season),
+      const DeepCollectionEquality().hash(inOutFlg));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_ShowPlanDetailModelCopyWith<_$_ShowPlanDetailModel> get copyWith =>
-      __$$_ShowPlanDetailModelCopyWithImpl<_$_ShowPlanDetailModel>(
+  _$ShowPlanDetailModelCopyWith<_ShowPlanDetailModel> get copyWith =>
+      __$ShowPlanDetailModelCopyWithImpl<_ShowPlanDetailModel>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowPlanDetailModelToJson(
-      this,
-    );
+    return _$$_ShowPlanDetailModelToJson(this);
   }
 }
 
 abstract class _ShowPlanDetailModel implements ShowPlanDetailModel {
   const factory _ShowPlanDetailModel(
-      {final String? budget,
-      final int? numberOfPeople,
-      final String? vehicle,
-      final String? season,
-      final String? inOutFlg}) = _$_ShowPlanDetailModel;
+      {String? budget,
+      int? numberOfPeople,
+      String? vehicle,
+      String? season,
+      String? inOutFlg}) = _$_ShowPlanDetailModel;
 
   factory _ShowPlanDetailModel.fromJson(Map<String, dynamic> json) =
       _$_ShowPlanDetailModel.fromJson;
@@ -235,6 +259,6 @@ abstract class _ShowPlanDetailModel implements ShowPlanDetailModel {
   String? get inOutFlg;
   @override
   @JsonKey(ignore: true)
-  _$$_ShowPlanDetailModelCopyWith<_$_ShowPlanDetailModel> get copyWith =>
+  _$ShowPlanDetailModelCopyWith<_ShowPlanDetailModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

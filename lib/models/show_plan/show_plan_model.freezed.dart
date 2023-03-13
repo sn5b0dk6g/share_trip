@@ -12,11 +12,46 @@ part of 'show_plan_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ShowPlanModel _$ShowPlanModelFromJson(Map<String, dynamic> json) {
   return _ShowPlanModel.fromJson(json);
 }
+
+/// @nodoc
+class _$ShowPlanModelTearOff {
+  const _$ShowPlanModelTearOff();
+
+  _ShowPlanModel call(
+      {required String planTitle,
+      String? mainImage,
+      String? userImage,
+      required String countryFlg,
+      required String mainPlace,
+      String? detailPlace,
+      String? heartCnt,
+      ShowPlanDetailModel? showPlanDetailModel,
+      List<ScheduleModel>? scheduleModel}) {
+    return _ShowPlanModel(
+      planTitle: planTitle,
+      mainImage: mainImage,
+      userImage: userImage,
+      countryFlg: countryFlg,
+      mainPlace: mainPlace,
+      detailPlace: detailPlace,
+      heartCnt: heartCnt,
+      showPlanDetailModel: showPlanDetailModel,
+      scheduleModel: scheduleModel,
+    );
+  }
+
+  ShowPlanModel fromJson(Map<String, Object?> json) {
+    return ShowPlanModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ShowPlanModel = _$ShowPlanModelTearOff();
 
 /// @nodoc
 mixin _$ShowPlanModel {
@@ -41,8 +76,7 @@ mixin _$ShowPlanModel {
 abstract class $ShowPlanModelCopyWith<$Res> {
   factory $ShowPlanModelCopyWith(
           ShowPlanModel value, $Res Function(ShowPlanModel) then) =
-      _$ShowPlanModelCopyWithImpl<$Res, ShowPlanModel>;
-  @useResult
+      _$ShowPlanModelCopyWithImpl<$Res>;
   $Res call(
       {String planTitle,
       String? mainImage,
@@ -58,70 +92,67 @@ abstract class $ShowPlanModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ShowPlanModelCopyWithImpl<$Res, $Val extends ShowPlanModel>
+class _$ShowPlanModelCopyWithImpl<$Res>
     implements $ShowPlanModelCopyWith<$Res> {
   _$ShowPlanModelCopyWithImpl(this._value, this._then);
 
+  final ShowPlanModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ShowPlanModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? planTitle = null,
+    Object? planTitle = freezed,
     Object? mainImage = freezed,
     Object? userImage = freezed,
-    Object? countryFlg = null,
-    Object? mainPlace = null,
+    Object? countryFlg = freezed,
+    Object? mainPlace = freezed,
     Object? detailPlace = freezed,
     Object? heartCnt = freezed,
     Object? showPlanDetailModel = freezed,
     Object? scheduleModel = freezed,
   }) {
     return _then(_value.copyWith(
-      planTitle: null == planTitle
+      planTitle: planTitle == freezed
           ? _value.planTitle
           : planTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      mainImage: freezed == mainImage
+      mainImage: mainImage == freezed
           ? _value.mainImage
           : mainImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      userImage: freezed == userImage
+      userImage: userImage == freezed
           ? _value.userImage
           : userImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      countryFlg: null == countryFlg
+      countryFlg: countryFlg == freezed
           ? _value.countryFlg
           : countryFlg // ignore: cast_nullable_to_non_nullable
               as String,
-      mainPlace: null == mainPlace
+      mainPlace: mainPlace == freezed
           ? _value.mainPlace
           : mainPlace // ignore: cast_nullable_to_non_nullable
               as String,
-      detailPlace: freezed == detailPlace
+      detailPlace: detailPlace == freezed
           ? _value.detailPlace
           : detailPlace // ignore: cast_nullable_to_non_nullable
               as String?,
-      heartCnt: freezed == heartCnt
+      heartCnt: heartCnt == freezed
           ? _value.heartCnt
           : heartCnt // ignore: cast_nullable_to_non_nullable
               as String?,
-      showPlanDetailModel: freezed == showPlanDetailModel
+      showPlanDetailModel: showPlanDetailModel == freezed
           ? _value.showPlanDetailModel
           : showPlanDetailModel // ignore: cast_nullable_to_non_nullable
               as ShowPlanDetailModel?,
-      scheduleModel: freezed == scheduleModel
+      scheduleModel: scheduleModel == freezed
           ? _value.scheduleModel
           : scheduleModel // ignore: cast_nullable_to_non_nullable
               as List<ScheduleModel>?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $ShowPlanDetailModelCopyWith<$Res>? get showPlanDetailModel {
     if (_value.showPlanDetailModel == null) {
       return null;
@@ -129,19 +160,18 @@ class _$ShowPlanModelCopyWithImpl<$Res, $Val extends ShowPlanModel>
 
     return $ShowPlanDetailModelCopyWith<$Res>(_value.showPlanDetailModel!,
         (value) {
-      return _then(_value.copyWith(showPlanDetailModel: value) as $Val);
+      return _then(_value.copyWith(showPlanDetailModel: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_ShowPlanModelCopyWith<$Res>
+abstract class _$ShowPlanModelCopyWith<$Res>
     implements $ShowPlanModelCopyWith<$Res> {
-  factory _$$_ShowPlanModelCopyWith(
-          _$_ShowPlanModel value, $Res Function(_$_ShowPlanModel) then) =
-      __$$_ShowPlanModelCopyWithImpl<$Res>;
+  factory _$ShowPlanModelCopyWith(
+          _ShowPlanModel value, $Res Function(_ShowPlanModel) then) =
+      __$ShowPlanModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {String planTitle,
       String? mainImage,
@@ -158,61 +188,63 @@ abstract class _$$_ShowPlanModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ShowPlanModelCopyWithImpl<$Res>
-    extends _$ShowPlanModelCopyWithImpl<$Res, _$_ShowPlanModel>
-    implements _$$_ShowPlanModelCopyWith<$Res> {
-  __$$_ShowPlanModelCopyWithImpl(
-      _$_ShowPlanModel _value, $Res Function(_$_ShowPlanModel) _then)
-      : super(_value, _then);
+class __$ShowPlanModelCopyWithImpl<$Res>
+    extends _$ShowPlanModelCopyWithImpl<$Res>
+    implements _$ShowPlanModelCopyWith<$Res> {
+  __$ShowPlanModelCopyWithImpl(
+      _ShowPlanModel _value, $Res Function(_ShowPlanModel) _then)
+      : super(_value, (v) => _then(v as _ShowPlanModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _ShowPlanModel get _value => super._value as _ShowPlanModel;
+
   @override
   $Res call({
-    Object? planTitle = null,
+    Object? planTitle = freezed,
     Object? mainImage = freezed,
     Object? userImage = freezed,
-    Object? countryFlg = null,
-    Object? mainPlace = null,
+    Object? countryFlg = freezed,
+    Object? mainPlace = freezed,
     Object? detailPlace = freezed,
     Object? heartCnt = freezed,
     Object? showPlanDetailModel = freezed,
     Object? scheduleModel = freezed,
   }) {
-    return _then(_$_ShowPlanModel(
-      planTitle: null == planTitle
+    return _then(_ShowPlanModel(
+      planTitle: planTitle == freezed
           ? _value.planTitle
           : planTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      mainImage: freezed == mainImage
+      mainImage: mainImage == freezed
           ? _value.mainImage
           : mainImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      userImage: freezed == userImage
+      userImage: userImage == freezed
           ? _value.userImage
           : userImage // ignore: cast_nullable_to_non_nullable
               as String?,
-      countryFlg: null == countryFlg
+      countryFlg: countryFlg == freezed
           ? _value.countryFlg
           : countryFlg // ignore: cast_nullable_to_non_nullable
               as String,
-      mainPlace: null == mainPlace
+      mainPlace: mainPlace == freezed
           ? _value.mainPlace
           : mainPlace // ignore: cast_nullable_to_non_nullable
               as String,
-      detailPlace: freezed == detailPlace
+      detailPlace: detailPlace == freezed
           ? _value.detailPlace
           : detailPlace // ignore: cast_nullable_to_non_nullable
               as String?,
-      heartCnt: freezed == heartCnt
+      heartCnt: heartCnt == freezed
           ? _value.heartCnt
           : heartCnt // ignore: cast_nullable_to_non_nullable
               as String?,
-      showPlanDetailModel: freezed == showPlanDetailModel
+      showPlanDetailModel: showPlanDetailModel == freezed
           ? _value.showPlanDetailModel
           : showPlanDetailModel // ignore: cast_nullable_to_non_nullable
               as ShowPlanDetailModel?,
-      scheduleModel: freezed == scheduleModel
-          ? _value._scheduleModel
+      scheduleModel: scheduleModel == freezed
+          ? _value.scheduleModel
           : scheduleModel // ignore: cast_nullable_to_non_nullable
               as List<ScheduleModel>?,
     ));
@@ -231,8 +263,7 @@ class _$_ShowPlanModel implements _ShowPlanModel {
       this.detailPlace,
       this.heartCnt,
       this.showPlanDetailModel,
-      final List<ScheduleModel>? scheduleModel})
-      : _scheduleModel = scheduleModel;
+      this.scheduleModel});
 
   factory _$_ShowPlanModel.fromJson(Map<String, dynamic> json) =>
       _$$_ShowPlanModelFromJson(json);
@@ -243,8 +274,7 @@ class _$_ShowPlanModel implements _ShowPlanModel {
   final String? mainImage;
   @override
   final String? userImage;
-// 0:国内、1:海外
-  @override
+  @override // 0:国内、1:海外
   final String countryFlg;
   @override
   final String mainPlace;
@@ -254,14 +284,8 @@ class _$_ShowPlanModel implements _ShowPlanModel {
   final String? heartCnt;
   @override
   final ShowPlanDetailModel? showPlanDetailModel;
-  final List<ScheduleModel>? _scheduleModel;
   @override
-  List<ScheduleModel>? get scheduleModel {
-    final value = _scheduleModel;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ScheduleModel>? scheduleModel;
 
   @override
   String toString() {
@@ -272,66 +296,57 @@ class _$_ShowPlanModel implements _ShowPlanModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShowPlanModel &&
-            (identical(other.planTitle, planTitle) ||
-                other.planTitle == planTitle) &&
-            (identical(other.mainImage, mainImage) ||
-                other.mainImage == mainImage) &&
-            (identical(other.userImage, userImage) ||
-                other.userImage == userImage) &&
-            (identical(other.countryFlg, countryFlg) ||
-                other.countryFlg == countryFlg) &&
-            (identical(other.mainPlace, mainPlace) ||
-                other.mainPlace == mainPlace) &&
-            (identical(other.detailPlace, detailPlace) ||
-                other.detailPlace == detailPlace) &&
-            (identical(other.heartCnt, heartCnt) ||
-                other.heartCnt == heartCnt) &&
-            (identical(other.showPlanDetailModel, showPlanDetailModel) ||
-                other.showPlanDetailModel == showPlanDetailModel) &&
+            other is _ShowPlanModel &&
+            const DeepCollectionEquality().equals(other.planTitle, planTitle) &&
+            const DeepCollectionEquality().equals(other.mainImage, mainImage) &&
+            const DeepCollectionEquality().equals(other.userImage, userImage) &&
             const DeepCollectionEquality()
-                .equals(other._scheduleModel, _scheduleModel));
+                .equals(other.countryFlg, countryFlg) &&
+            const DeepCollectionEquality().equals(other.mainPlace, mainPlace) &&
+            const DeepCollectionEquality()
+                .equals(other.detailPlace, detailPlace) &&
+            const DeepCollectionEquality().equals(other.heartCnt, heartCnt) &&
+            const DeepCollectionEquality()
+                .equals(other.showPlanDetailModel, showPlanDetailModel) &&
+            const DeepCollectionEquality()
+                .equals(other.scheduleModel, scheduleModel));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      planTitle,
-      mainImage,
-      userImage,
-      countryFlg,
-      mainPlace,
-      detailPlace,
-      heartCnt,
-      showPlanDetailModel,
-      const DeepCollectionEquality().hash(_scheduleModel));
+      const DeepCollectionEquality().hash(planTitle),
+      const DeepCollectionEquality().hash(mainImage),
+      const DeepCollectionEquality().hash(userImage),
+      const DeepCollectionEquality().hash(countryFlg),
+      const DeepCollectionEquality().hash(mainPlace),
+      const DeepCollectionEquality().hash(detailPlace),
+      const DeepCollectionEquality().hash(heartCnt),
+      const DeepCollectionEquality().hash(showPlanDetailModel),
+      const DeepCollectionEquality().hash(scheduleModel));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_ShowPlanModelCopyWith<_$_ShowPlanModel> get copyWith =>
-      __$$_ShowPlanModelCopyWithImpl<_$_ShowPlanModel>(this, _$identity);
+  _$ShowPlanModelCopyWith<_ShowPlanModel> get copyWith =>
+      __$ShowPlanModelCopyWithImpl<_ShowPlanModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowPlanModelToJson(
-      this,
-    );
+    return _$$_ShowPlanModelToJson(this);
   }
 }
 
 abstract class _ShowPlanModel implements ShowPlanModel {
   const factory _ShowPlanModel(
-      {required final String planTitle,
-      final String? mainImage,
-      final String? userImage,
-      required final String countryFlg,
-      required final String mainPlace,
-      final String? detailPlace,
-      final String? heartCnt,
-      final ShowPlanDetailModel? showPlanDetailModel,
-      final List<ScheduleModel>? scheduleModel}) = _$_ShowPlanModel;
+      {required String planTitle,
+      String? mainImage,
+      String? userImage,
+      required String countryFlg,
+      required String mainPlace,
+      String? detailPlace,
+      String? heartCnt,
+      ShowPlanDetailModel? showPlanDetailModel,
+      List<ScheduleModel>? scheduleModel}) = _$_ShowPlanModel;
 
   factory _ShowPlanModel.fromJson(Map<String, dynamic> json) =
       _$_ShowPlanModel.fromJson;
@@ -356,6 +371,6 @@ abstract class _ShowPlanModel implements ShowPlanModel {
   List<ScheduleModel>? get scheduleModel;
   @override
   @JsonKey(ignore: true)
-  _$$_ShowPlanModelCopyWith<_$_ShowPlanModel> get copyWith =>
+  _$ShowPlanModelCopyWith<_ShowPlanModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

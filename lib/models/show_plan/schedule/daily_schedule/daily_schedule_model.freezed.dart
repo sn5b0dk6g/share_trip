@@ -12,11 +12,38 @@ part of 'daily_schedule_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DailyScheduleModel _$DailyScheduleModelFromJson(Map<String, dynamic> json) {
   return _DailyScheduleModel.fromJson(json);
 }
+
+/// @nodoc
+class _$DailyScheduleModelTearOff {
+  const _$DailyScheduleModelTearOff();
+
+  _DailyScheduleModel call(
+      {String? title,
+      String? startTimeHM,
+      String? endTimeHM,
+      List<String>? images,
+      DetailDailyModel? detailDailyModel}) {
+    return _DailyScheduleModel(
+      title: title,
+      startTimeHM: startTimeHM,
+      endTimeHM: endTimeHM,
+      images: images,
+      detailDailyModel: detailDailyModel,
+    );
+  }
+
+  DailyScheduleModel fromJson(Map<String, Object?> json) {
+    return DailyScheduleModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DailyScheduleModel = _$DailyScheduleModelTearOff();
 
 /// @nodoc
 mixin _$DailyScheduleModel {
@@ -36,8 +63,7 @@ mixin _$DailyScheduleModel {
 abstract class $DailyScheduleModelCopyWith<$Res> {
   factory $DailyScheduleModelCopyWith(
           DailyScheduleModel value, $Res Function(DailyScheduleModel) then) =
-      _$DailyScheduleModelCopyWithImpl<$Res, DailyScheduleModel>;
-  @useResult
+      _$DailyScheduleModelCopyWithImpl<$Res>;
   $Res call(
       {String? title,
       String? startTimeHM,
@@ -49,16 +75,14 @@ abstract class $DailyScheduleModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DailyScheduleModelCopyWithImpl<$Res, $Val extends DailyScheduleModel>
+class _$DailyScheduleModelCopyWithImpl<$Res>
     implements $DailyScheduleModelCopyWith<$Res> {
   _$DailyScheduleModelCopyWithImpl(this._value, this._then);
 
+  final DailyScheduleModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(DailyScheduleModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = freezed,
@@ -68,50 +92,48 @@ class _$DailyScheduleModelCopyWithImpl<$Res, $Val extends DailyScheduleModel>
     Object? detailDailyModel = freezed,
   }) {
     return _then(_value.copyWith(
-      title: freezed == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      startTimeHM: freezed == startTimeHM
+      startTimeHM: startTimeHM == freezed
           ? _value.startTimeHM
           : startTimeHM // ignore: cast_nullable_to_non_nullable
               as String?,
-      endTimeHM: freezed == endTimeHM
+      endTimeHM: endTimeHM == freezed
           ? _value.endTimeHM
           : endTimeHM // ignore: cast_nullable_to_non_nullable
               as String?,
-      images: freezed == images
+      images: images == freezed
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      detailDailyModel: freezed == detailDailyModel
+      detailDailyModel: detailDailyModel == freezed
           ? _value.detailDailyModel
           : detailDailyModel // ignore: cast_nullable_to_non_nullable
               as DetailDailyModel?,
-    ) as $Val);
+    ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $DetailDailyModelCopyWith<$Res>? get detailDailyModel {
     if (_value.detailDailyModel == null) {
       return null;
     }
 
     return $DetailDailyModelCopyWith<$Res>(_value.detailDailyModel!, (value) {
-      return _then(_value.copyWith(detailDailyModel: value) as $Val);
+      return _then(_value.copyWith(detailDailyModel: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_DailyScheduleModelCopyWith<$Res>
+abstract class _$DailyScheduleModelCopyWith<$Res>
     implements $DailyScheduleModelCopyWith<$Res> {
-  factory _$$_DailyScheduleModelCopyWith(_$_DailyScheduleModel value,
-          $Res Function(_$_DailyScheduleModel) then) =
-      __$$_DailyScheduleModelCopyWithImpl<$Res>;
+  factory _$DailyScheduleModelCopyWith(
+          _DailyScheduleModel value, $Res Function(_DailyScheduleModel) then) =
+      __$DailyScheduleModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {String? title,
       String? startTimeHM,
@@ -124,14 +146,16 @@ abstract class _$$_DailyScheduleModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DailyScheduleModelCopyWithImpl<$Res>
-    extends _$DailyScheduleModelCopyWithImpl<$Res, _$_DailyScheduleModel>
-    implements _$$_DailyScheduleModelCopyWith<$Res> {
-  __$$_DailyScheduleModelCopyWithImpl(
-      _$_DailyScheduleModel _value, $Res Function(_$_DailyScheduleModel) _then)
-      : super(_value, _then);
+class __$DailyScheduleModelCopyWithImpl<$Res>
+    extends _$DailyScheduleModelCopyWithImpl<$Res>
+    implements _$DailyScheduleModelCopyWith<$Res> {
+  __$DailyScheduleModelCopyWithImpl(
+      _DailyScheduleModel _value, $Res Function(_DailyScheduleModel) _then)
+      : super(_value, (v) => _then(v as _DailyScheduleModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _DailyScheduleModel get _value => super._value as _DailyScheduleModel;
+
   @override
   $Res call({
     Object? title = freezed,
@@ -140,24 +164,24 @@ class __$$_DailyScheduleModelCopyWithImpl<$Res>
     Object? images = freezed,
     Object? detailDailyModel = freezed,
   }) {
-    return _then(_$_DailyScheduleModel(
-      title: freezed == title
+    return _then(_DailyScheduleModel(
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      startTimeHM: freezed == startTimeHM
+      startTimeHM: startTimeHM == freezed
           ? _value.startTimeHM
           : startTimeHM // ignore: cast_nullable_to_non_nullable
               as String?,
-      endTimeHM: freezed == endTimeHM
+      endTimeHM: endTimeHM == freezed
           ? _value.endTimeHM
           : endTimeHM // ignore: cast_nullable_to_non_nullable
               as String?,
-      images: freezed == images
-          ? _value._images
+      images: images == freezed
+          ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      detailDailyModel: freezed == detailDailyModel
+      detailDailyModel: detailDailyModel == freezed
           ? _value.detailDailyModel
           : detailDailyModel // ignore: cast_nullable_to_non_nullable
               as DetailDailyModel?,
@@ -172,9 +196,8 @@ class _$_DailyScheduleModel implements _DailyScheduleModel {
       {this.title,
       this.startTimeHM,
       this.endTimeHM,
-      final List<String>? images,
-      this.detailDailyModel})
-      : _images = images;
+      this.images,
+      this.detailDailyModel});
 
   factory _$_DailyScheduleModel.fromJson(Map<String, dynamic> json) =>
       _$$_DailyScheduleModelFromJson(json);
@@ -185,15 +208,8 @@ class _$_DailyScheduleModel implements _DailyScheduleModel {
   final String? startTimeHM;
   @override
   final String? endTimeHM;
-  final List<String>? _images;
   @override
-  List<String>? get images {
-    final value = _images;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<String>? images;
   @override
   final DetailDailyModel? detailDailyModel;
 
@@ -206,44 +222,43 @@ class _$_DailyScheduleModel implements _DailyScheduleModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DailyScheduleModel &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.startTimeHM, startTimeHM) ||
-                other.startTimeHM == startTimeHM) &&
-            (identical(other.endTimeHM, endTimeHM) ||
-                other.endTimeHM == endTimeHM) &&
-            const DeepCollectionEquality().equals(other._images, _images) &&
-            (identical(other.detailDailyModel, detailDailyModel) ||
-                other.detailDailyModel == detailDailyModel));
+            other is _DailyScheduleModel &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.startTimeHM, startTimeHM) &&
+            const DeepCollectionEquality().equals(other.endTimeHM, endTimeHM) &&
+            const DeepCollectionEquality().equals(other.images, images) &&
+            const DeepCollectionEquality()
+                .equals(other.detailDailyModel, detailDailyModel));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, startTimeHM, endTimeHM,
-      const DeepCollectionEquality().hash(_images), detailDailyModel);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(startTimeHM),
+      const DeepCollectionEquality().hash(endTimeHM),
+      const DeepCollectionEquality().hash(images),
+      const DeepCollectionEquality().hash(detailDailyModel));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_DailyScheduleModelCopyWith<_$_DailyScheduleModel> get copyWith =>
-      __$$_DailyScheduleModelCopyWithImpl<_$_DailyScheduleModel>(
-          this, _$identity);
+  _$DailyScheduleModelCopyWith<_DailyScheduleModel> get copyWith =>
+      __$DailyScheduleModelCopyWithImpl<_DailyScheduleModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DailyScheduleModelToJson(
-      this,
-    );
+    return _$$_DailyScheduleModelToJson(this);
   }
 }
 
 abstract class _DailyScheduleModel implements DailyScheduleModel {
   const factory _DailyScheduleModel(
-      {final String? title,
-      final String? startTimeHM,
-      final String? endTimeHM,
-      final List<String>? images,
-      final DetailDailyModel? detailDailyModel}) = _$_DailyScheduleModel;
+      {String? title,
+      String? startTimeHM,
+      String? endTimeHM,
+      List<String>? images,
+      DetailDailyModel? detailDailyModel}) = _$_DailyScheduleModel;
 
   factory _DailyScheduleModel.fromJson(Map<String, dynamic> json) =
       _$_DailyScheduleModel.fromJson;
@@ -260,6 +275,6 @@ abstract class _DailyScheduleModel implements DailyScheduleModel {
   DetailDailyModel? get detailDailyModel;
   @override
   @JsonKey(ignore: true)
-  _$$_DailyScheduleModelCopyWith<_$_DailyScheduleModel> get copyWith =>
+  _$DailyScheduleModelCopyWith<_DailyScheduleModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

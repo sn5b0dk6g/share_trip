@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:share_trip/pages/home/home_page.dart';
-import 'package:share_trip/pages/my_page/edit_prifile_page.dart';
+import 'package:share_trip/pages/my_page/edit_profile_page.dart';
 import 'package:share_trip/pages/my_page/follow_list_page.dart';
 import 'package:share_trip/pages/my_page/my_page.dart';
 import 'package:share_trip/pages/notification/notification_page.dart';
@@ -84,13 +84,6 @@ final routerProvider = Provider((ref) {
                 child: const EditProfilePage(),
               ),
             ),
-            GoRoute(
-                name: "myPage-showplan",
-                path: 'showplan',
-                pageBuilder: (context, state) => MaterialPage(
-                      key: state.pageKey,
-                      child: ShowPlanPage(planId: state.extra! as String),
-                    )),
           ]),
     ],
     navigatorBuilder: (context, state, child) {

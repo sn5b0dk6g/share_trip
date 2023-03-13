@@ -37,11 +37,11 @@ class _MyBottomNavigationState extends ConsumerState<ShowBottomNavigationWidget>
                 _onTap(i);
               },
               items: [
-                makeBottomBarItem(Icons.home, Message.homeTab),
-                makeBottomBarItem(Icons.search, Message.searchTab),
-                makeBottomBarItem(
+                _makeBottomBarItem(Icons.home, Message.homeTab),
+                _makeBottomBarItem(Icons.search, Message.searchTab),
+                _makeBottomBarItem(
                     Icons.notifications_outlined, Message.notificationTab),
-                makeBottomBarItem(Icons.person, Message.myPageTab),
+                _makeBottomBarItem(Icons.person, Message.myPageTab),
               ],
             ),
           )
@@ -50,7 +50,7 @@ class _MyBottomNavigationState extends ConsumerState<ShowBottomNavigationWidget>
     );
   }
 
-  BottomNavigationBarItem makeBottomBarItem(IconData icon, String text) {
+  BottomNavigationBarItem _makeBottomBarItem(IconData icon, String text) {
     return BottomNavigationBarItem(
       icon: Icon(icon),
       label: text,

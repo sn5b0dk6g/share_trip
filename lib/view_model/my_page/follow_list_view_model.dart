@@ -1,15 +1,15 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_trip/models/common/user/user_model.dart';
-import 'package:share_trip/repository/my_page/follow_page_repository.dart';
-import 'package:share_trip/repository/my_page/follow_page_repository_impl.dart';
+import 'package:share_trip/repository/my_page/follow_list_repository.dart';
+import 'package:share_trip/repository/my_page/follow_list_repository_impl.dart';
 import 'package:share_trip/state/provider.dart';
 
 final followPageRepositoryProvider =
-    Provider<FollowPageRepository>((ref) => FollowPageRepositoryImpl());
+    Provider<FollowListRepository>((ref) => FollowListRepositoryImpl());
 
-class FollowPageViewModel {
-    FollowPageViewModel({required this.ref});
+class FollowListViewModel {
+    FollowListViewModel({required this.ref});
 
     final ProviderRef ref;
     late final String userId = ref.watch(userIdProvider);

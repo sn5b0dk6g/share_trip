@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:share_trip/models/my_page/my_page_model.dart';
-import 'package:share_trip/models/result/result.dart';
 import 'package:share_trip/repository/my_page/my_page_repository.dart';
 import 'package:share_trip/utils/common_util.dart';
 

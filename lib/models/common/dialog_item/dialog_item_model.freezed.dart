@@ -12,11 +12,36 @@ part of 'dialog_item_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DialogItemModel _$DialogItemModelFromJson(Map<String, dynamic> json) {
   return _DialogItemModel.fromJson(json);
 }
+
+/// @nodoc
+class _$DialogItemModelTearOff {
+  const _$DialogItemModelTearOff();
+
+  _DialogItemModel call(
+      {required String title,
+      required int iconCodepoint,
+      required String iconFontFamily,
+      required dynamic content}) {
+    return _DialogItemModel(
+      title: title,
+      iconCodepoint: iconCodepoint,
+      iconFontFamily: iconFontFamily,
+      content: content,
+    );
+  }
+
+  DialogItemModel fromJson(Map<String, Object?> json) {
+    return DialogItemModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DialogItemModel = _$DialogItemModelTearOff();
 
 /// @nodoc
 mixin _$DialogItemModel {
@@ -35,8 +60,7 @@ mixin _$DialogItemModel {
 abstract class $DialogItemModelCopyWith<$Res> {
   factory $DialogItemModelCopyWith(
           DialogItemModel value, $Res Function(DialogItemModel) then) =
-      _$DialogItemModelCopyWithImpl<$Res, DialogItemModel>;
-  @useResult
+      _$DialogItemModelCopyWithImpl<$Res>;
   $Res call(
       {String title,
       int iconCodepoint,
@@ -45,52 +69,49 @@ abstract class $DialogItemModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DialogItemModelCopyWithImpl<$Res, $Val extends DialogItemModel>
+class _$DialogItemModelCopyWithImpl<$Res>
     implements $DialogItemModelCopyWith<$Res> {
   _$DialogItemModelCopyWithImpl(this._value, this._then);
 
+  final DialogItemModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(DialogItemModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
-    Object? iconCodepoint = null,
-    Object? iconFontFamily = null,
-    Object? content = null,
+    Object? title = freezed,
+    Object? iconCodepoint = freezed,
+    Object? iconFontFamily = freezed,
+    Object? content = freezed,
   }) {
     return _then(_value.copyWith(
-      title: null == title
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      iconCodepoint: null == iconCodepoint
+      iconCodepoint: iconCodepoint == freezed
           ? _value.iconCodepoint
           : iconCodepoint // ignore: cast_nullable_to_non_nullable
               as int,
-      iconFontFamily: null == iconFontFamily
+      iconFontFamily: iconFontFamily == freezed
           ? _value.iconFontFamily
           : iconFontFamily // ignore: cast_nullable_to_non_nullable
               as String,
-      content: null == content
+      content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as dynamic,
-    ) as $Val);
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$_DialogItemModelCopyWith<$Res>
+abstract class _$DialogItemModelCopyWith<$Res>
     implements $DialogItemModelCopyWith<$Res> {
-  factory _$$_DialogItemModelCopyWith(
-          _$_DialogItemModel value, $Res Function(_$_DialogItemModel) then) =
-      __$$_DialogItemModelCopyWithImpl<$Res>;
+  factory _$DialogItemModelCopyWith(
+          _DialogItemModel value, $Res Function(_DialogItemModel) then) =
+      __$DialogItemModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {String title,
       int iconCodepoint,
@@ -99,35 +120,37 @@ abstract class _$$_DialogItemModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DialogItemModelCopyWithImpl<$Res>
-    extends _$DialogItemModelCopyWithImpl<$Res, _$_DialogItemModel>
-    implements _$$_DialogItemModelCopyWith<$Res> {
-  __$$_DialogItemModelCopyWithImpl(
-      _$_DialogItemModel _value, $Res Function(_$_DialogItemModel) _then)
-      : super(_value, _then);
+class __$DialogItemModelCopyWithImpl<$Res>
+    extends _$DialogItemModelCopyWithImpl<$Res>
+    implements _$DialogItemModelCopyWith<$Res> {
+  __$DialogItemModelCopyWithImpl(
+      _DialogItemModel _value, $Res Function(_DialogItemModel) _then)
+      : super(_value, (v) => _then(v as _DialogItemModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _DialogItemModel get _value => super._value as _DialogItemModel;
+
   @override
   $Res call({
-    Object? title = null,
-    Object? iconCodepoint = null,
-    Object? iconFontFamily = null,
-    Object? content = null,
+    Object? title = freezed,
+    Object? iconCodepoint = freezed,
+    Object? iconFontFamily = freezed,
+    Object? content = freezed,
   }) {
-    return _then(_$_DialogItemModel(
-      title: null == title
+    return _then(_DialogItemModel(
+      title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      iconCodepoint: null == iconCodepoint
+      iconCodepoint: iconCodepoint == freezed
           ? _value.iconCodepoint
           : iconCodepoint // ignore: cast_nullable_to_non_nullable
               as int,
-      iconFontFamily: null == iconFontFamily
+      iconFontFamily: iconFontFamily == freezed
           ? _value.iconFontFamily
           : iconFontFamily // ignore: cast_nullable_to_non_nullable
               as String,
-      content: null == content
+      content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -178,40 +201,40 @@ class _$_DialogItemModel
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DialogItemModel &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.iconCodepoint, iconCodepoint) ||
-                other.iconCodepoint == iconCodepoint) &&
-            (identical(other.iconFontFamily, iconFontFamily) ||
-                other.iconFontFamily == iconFontFamily) &&
+            other is _DialogItemModel &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.iconCodepoint, iconCodepoint) &&
+            const DeepCollectionEquality()
+                .equals(other.iconFontFamily, iconFontFamily) &&
             const DeepCollectionEquality().equals(other.content, content));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, iconCodepoint,
-      iconFontFamily, const DeepCollectionEquality().hash(content));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(iconCodepoint),
+      const DeepCollectionEquality().hash(iconFontFamily),
+      const DeepCollectionEquality().hash(content));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_DialogItemModelCopyWith<_$_DialogItemModel> get copyWith =>
-      __$$_DialogItemModelCopyWithImpl<_$_DialogItemModel>(this, _$identity);
+  _$DialogItemModelCopyWith<_DialogItemModel> get copyWith =>
+      __$DialogItemModelCopyWithImpl<_DialogItemModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DialogItemModelToJson(
-      this,
-    );
+    return _$$_DialogItemModelToJson(this);
   }
 }
 
 abstract class _DialogItemModel implements DialogItemModel {
   const factory _DialogItemModel(
-      {required final String title,
-      required final int iconCodepoint,
-      required final String iconFontFamily,
-      required final dynamic content}) = _$_DialogItemModel;
+      {required String title,
+      required int iconCodepoint,
+      required String iconFontFamily,
+      required dynamic content}) = _$_DialogItemModel;
 
   factory _DialogItemModel.fromJson(Map<String, dynamic> json) =
       _$_DialogItemModel.fromJson;
@@ -226,6 +249,6 @@ abstract class _DialogItemModel implements DialogItemModel {
   dynamic get content;
   @override
   @JsonKey(ignore: true)
-  _$$_DialogItemModelCopyWith<_$_DialogItemModel> get copyWith =>
+  _$DialogItemModelCopyWith<_DialogItemModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

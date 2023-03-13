@@ -12,11 +12,34 @@ part of 'my_page_tab_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MyPageTabModel _$MyPageTabModelFromJson(Map<String, dynamic> json) {
   return _MyPageTabModel.fromJson(json);
 }
+
+/// @nodoc
+class _$MyPageTabModelTearOff {
+  const _$MyPageTabModelTearOff();
+
+  _MyPageTabModel call(
+      {List<TabToListModel>? post,
+      List<TabToListModel>? like,
+      List<TabToListModel>? download}) {
+    return _MyPageTabModel(
+      post: post,
+      like: like,
+      download: download,
+    );
+  }
+
+  MyPageTabModel fromJson(Map<String, Object?> json) {
+    return MyPageTabModel.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $MyPageTabModel = _$MyPageTabModelTearOff();
 
 /// @nodoc
 mixin _$MyPageTabModel {
@@ -34,8 +57,7 @@ mixin _$MyPageTabModel {
 abstract class $MyPageTabModelCopyWith<$Res> {
   factory $MyPageTabModelCopyWith(
           MyPageTabModel value, $Res Function(MyPageTabModel) then) =
-      _$MyPageTabModelCopyWithImpl<$Res, MyPageTabModel>;
-  @useResult
+      _$MyPageTabModelCopyWithImpl<$Res>;
   $Res call(
       {List<TabToListModel>? post,
       List<TabToListModel>? like,
@@ -43,16 +65,14 @@ abstract class $MyPageTabModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MyPageTabModelCopyWithImpl<$Res, $Val extends MyPageTabModel>
+class _$MyPageTabModelCopyWithImpl<$Res>
     implements $MyPageTabModelCopyWith<$Res> {
   _$MyPageTabModelCopyWithImpl(this._value, this._then);
 
+  final MyPageTabModel _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(MyPageTabModel) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? post = freezed,
@@ -60,30 +80,29 @@ class _$MyPageTabModelCopyWithImpl<$Res, $Val extends MyPageTabModel>
     Object? download = freezed,
   }) {
     return _then(_value.copyWith(
-      post: freezed == post
+      post: post == freezed
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      like: freezed == like
+      like: like == freezed
           ? _value.like
           : like // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      download: freezed == download
+      download: download == freezed
           ? _value.download
           : download // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-    ) as $Val);
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$_MyPageTabModelCopyWith<$Res>
+abstract class _$MyPageTabModelCopyWith<$Res>
     implements $MyPageTabModelCopyWith<$Res> {
-  factory _$$_MyPageTabModelCopyWith(
-          _$_MyPageTabModel value, $Res Function(_$_MyPageTabModel) then) =
-      __$$_MyPageTabModelCopyWithImpl<$Res>;
+  factory _$MyPageTabModelCopyWith(
+          _MyPageTabModel value, $Res Function(_MyPageTabModel) then) =
+      __$MyPageTabModelCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call(
       {List<TabToListModel>? post,
       List<TabToListModel>? like,
@@ -91,31 +110,33 @@ abstract class _$$_MyPageTabModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MyPageTabModelCopyWithImpl<$Res>
-    extends _$MyPageTabModelCopyWithImpl<$Res, _$_MyPageTabModel>
-    implements _$$_MyPageTabModelCopyWith<$Res> {
-  __$$_MyPageTabModelCopyWithImpl(
-      _$_MyPageTabModel _value, $Res Function(_$_MyPageTabModel) _then)
-      : super(_value, _then);
+class __$MyPageTabModelCopyWithImpl<$Res>
+    extends _$MyPageTabModelCopyWithImpl<$Res>
+    implements _$MyPageTabModelCopyWith<$Res> {
+  __$MyPageTabModelCopyWithImpl(
+      _MyPageTabModel _value, $Res Function(_MyPageTabModel) _then)
+      : super(_value, (v) => _then(v as _MyPageTabModel));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _MyPageTabModel get _value => super._value as _MyPageTabModel;
+
   @override
   $Res call({
     Object? post = freezed,
     Object? like = freezed,
     Object? download = freezed,
   }) {
-    return _then(_$_MyPageTabModel(
-      post: freezed == post
-          ? _value._post
+    return _then(_MyPageTabModel(
+      post: post == freezed
+          ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      like: freezed == like
-          ? _value._like
+      like: like == freezed
+          ? _value.like
           : like // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
-      download: freezed == download
-          ? _value._download
+      download: download == freezed
+          ? _value.download
           : download // ignore: cast_nullable_to_non_nullable
               as List<TabToListModel>?,
     ));
@@ -127,43 +148,17 @@ class __$$_MyPageTabModelCopyWithImpl<$Res>
 class _$_MyPageTabModel
     with DiagnosticableTreeMixin
     implements _MyPageTabModel {
-  const _$_MyPageTabModel(
-      {final List<TabToListModel>? post,
-      final List<TabToListModel>? like,
-      final List<TabToListModel>? download})
-      : _post = post,
-        _like = like,
-        _download = download;
+  const _$_MyPageTabModel({this.post, this.like, this.download});
 
   factory _$_MyPageTabModel.fromJson(Map<String, dynamic> json) =>
       _$$_MyPageTabModelFromJson(json);
 
-  final List<TabToListModel>? _post;
   @override
-  List<TabToListModel>? get post {
-    final value = _post;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<TabToListModel>? _like;
+  final List<TabToListModel>? post;
   @override
-  List<TabToListModel>? get like {
-    final value = _like;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<TabToListModel>? _download;
+  final List<TabToListModel>? like;
   @override
-  List<TabToListModel>? get download {
-    final value = _download;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<TabToListModel>? download;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -184,39 +179,35 @@ class _$_MyPageTabModel
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MyPageTabModel &&
-            const DeepCollectionEquality().equals(other._post, _post) &&
-            const DeepCollectionEquality().equals(other._like, _like) &&
-            const DeepCollectionEquality().equals(other._download, _download));
+            other is _MyPageTabModel &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.like, like) &&
+            const DeepCollectionEquality().equals(other.download, download));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_post),
-      const DeepCollectionEquality().hash(_like),
-      const DeepCollectionEquality().hash(_download));
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(like),
+      const DeepCollectionEquality().hash(download));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_MyPageTabModelCopyWith<_$_MyPageTabModel> get copyWith =>
-      __$$_MyPageTabModelCopyWithImpl<_$_MyPageTabModel>(this, _$identity);
+  _$MyPageTabModelCopyWith<_MyPageTabModel> get copyWith =>
+      __$MyPageTabModelCopyWithImpl<_MyPageTabModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MyPageTabModelToJson(
-      this,
-    );
+    return _$$_MyPageTabModelToJson(this);
   }
 }
 
 abstract class _MyPageTabModel implements MyPageTabModel {
   const factory _MyPageTabModel(
-      {final List<TabToListModel>? post,
-      final List<TabToListModel>? like,
-      final List<TabToListModel>? download}) = _$_MyPageTabModel;
+      {List<TabToListModel>? post,
+      List<TabToListModel>? like,
+      List<TabToListModel>? download}) = _$_MyPageTabModel;
 
   factory _MyPageTabModel.fromJson(Map<String, dynamic> json) =
       _$_MyPageTabModel.fromJson;
@@ -229,6 +220,6 @@ abstract class _MyPageTabModel implements MyPageTabModel {
   List<TabToListModel>? get download;
   @override
   @JsonKey(ignore: true)
-  _$$_MyPageTabModelCopyWith<_$_MyPageTabModel> get copyWith =>
+  _$MyPageTabModelCopyWith<_MyPageTabModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

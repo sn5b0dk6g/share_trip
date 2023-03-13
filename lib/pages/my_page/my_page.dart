@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:share_trip/models/common/tab_to_list/tab_to_list_model.dart';
 import 'package:share_trip/models/my_page/my_page_model.dart';
@@ -8,7 +9,7 @@ import 'package:share_trip/utils/common_util.dart';
 import 'package:share_trip/utils/message.dart';
 import 'package:share_trip/widgets/common_view_async_value_widget.dart';
 import 'package:share_trip/widgets/list_view_widget.dart';
-import 'package:share_trip/widgets/plan_widget.dart';
+import 'package:share_trip/widgets/overview_plan_widget.dart';
 import 'package:share_trip/widgets/tab_to_list_widget.dart';
 
 class MyPage extends StatelessWidget {
@@ -24,7 +25,7 @@ class MyPage extends StatelessWidget {
         title: const Text(Message.myPageTab),
         actions: <Widget>[
           SizedBox(
-            width: 40,
+            width: 40.w,
             child: IconButton(
               icon: const Icon(Icons.add),
               onPressed: () {
@@ -33,7 +34,7 @@ class MyPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 40,
+            width: 40.w,
             child: IconButton(
               icon: const Icon(Icons.menu),
               onPressed: () {
@@ -66,15 +67,15 @@ class ImageArea extends ConsumerWidget {
           children: [
             SizedBox(
                 width: double.infinity,
-                height: 130,
+                height: 130.h,
                 child: Row(
                   //mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    const SizedBox(width: 20),
+                    SizedBox(width: 20.w),
                     CircleAvatar(
                       backgroundImage: AssetImage(CommonUtil.insertMainImg(
                           data.user.userImage.toString())),
-                      radius: 50,
+                      radius: 50.r,
                     ),
                     Expanded(
                       child: Stack(
@@ -84,7 +85,7 @@ class ImageArea extends ConsumerWidget {
                           _userName(data.user.userName),
                           Align(
                             child: SizedBox(
-                              height: 50,
+                              height: 50.h,
                               child: Row(
                                 children: [
                                   _textButton(
@@ -113,12 +114,12 @@ class ImageArea extends ConsumerWidget {
 
   Widget _userName(String? name) {
     return Container(
-      margin: const EdgeInsets.only(left: 10, top: 15),
+      margin: const EdgeInsets.only(left: 10, top: 15).r,
       child: Text(
         name.toString(),
-        style: const TextStyle(
+        style: TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 20,
+          fontSize: 20.sp,
         ),
       ),
     );
@@ -143,7 +144,7 @@ class ImageArea extends ConsumerWidget {
     return Container(
       alignment: Alignment.bottomRight,
       height: 25,
-      margin: const EdgeInsets.only(right: 10, bottom: 10),
+      margin: const EdgeInsets.only(right: 10, bottom: 10).r,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           shape: const StadiumBorder(),
@@ -151,10 +152,10 @@ class ImageArea extends ConsumerWidget {
         onPressed: () => ref
             .read(myPageViewModelProvider.notifier)
             .toEditProfilePage(context),
-        child: const Text(
+        child: Text(
           Message.editProfile,
           style: TextStyle(
-            fontSize: 10,
+            fontSize: 10.sp,
           ),
         ),
       ),
@@ -163,8 +164,8 @@ class ImageArea extends ConsumerWidget {
 
   Widget _selfIntroductionText(String? selfIntroduction) {
     return Container(
-      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-      height: 100,
+      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10).r,
+      height: 100.h,
       width: double.infinity,
       child: Text(selfIntroduction ?? ""),
     );
@@ -198,7 +199,7 @@ class ActionArea extends ConsumerWidget {
       WidgetRef ref, List<TabToListModel> Function(MyPageModel) items) {
     return ListViewWidget<MyPageModel, TabToListModel>(
       asyncValue: ref.watch(myPageViewModelProvider),
-      items: items,
+      getItemsForListView: items,
       viewWidget: (item) => PlanWidget(
           item: item,
           onTapAction: (context, tabToListModel) => context.push(
@@ -229,17 +230,17 @@ class ImageAreaTest extends ConsumerWidget {
             children: [
               SizedBox(
                   width: double.infinity,
-                  height: 130,
+                  height: 130.h,
                   child: Row(
                     //mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      const SizedBox(
-                        width: 20,
+                      SizedBox(
+                        width: 20.w,
                       ),
                       CircleAvatar(
                         backgroundImage:
                             AssetImage(data.user.userImage.toString()),
-                        radius: 50,
+                        radius: 50.r,
                       ),
                       Expanded(
                         child: Column(
@@ -268,7 +269,7 @@ class ImageAreaTest extends ConsumerWidget {
 
   Widget _userName(String? name) {
     return Container(
-      margin: const EdgeInsets.only(left: 10, top: 20),
+      margin: const EdgeInsets.only(left: 10, top: 20).r,
       child: Text(
         name.toString(),
         style: const TextStyle(
@@ -297,17 +298,17 @@ class ImageAreaTest extends ConsumerWidget {
   Widget _editProfileButton() {
     return Container(
       alignment: Alignment.bottomRight,
-      height: 25,
-      margin: const EdgeInsets.only(right: 10),
+      height: 25.h,
+      margin: const EdgeInsets.only(right: 10).r,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           shape: const StadiumBorder(),
         ),
         onPressed: () {},
-        child: const Text(
+        child: Text(
           Message.editProfile,
           style: TextStyle(
-            fontSize: 10,
+            fontSize: 10.sp,
           ),
         ),
       ),
@@ -316,8 +317,8 @@ class ImageAreaTest extends ConsumerWidget {
 
   Widget _selfIntroductionText(String? selfIntroduction) {
     return Container(
-      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-      height: 100,
+      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10).r,
+      height: 100.h,
       width: double.infinity,
       child: Text(selfIntroduction ?? ""),
     );

@@ -9,7 +9,6 @@ import 'package:share_trip/models/show_plan/schedule/daily_schedule/detail_daily
 import 'package:share_trip/models/show_plan/show_plan_model.dart';
 import 'package:share_trip/state/provider.dart';
 import 'package:share_trip/utils/design.dart';
-import 'package:share_trip/widgets/common_view_async_value_widget.dart';
 import 'package:share_trip/widgets/dialog_widget.dart';
 import 'package:share_trip/widgets/list_view_separate_widget.dart';
 
@@ -23,11 +22,24 @@ class ShowPlanPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     print("ShowPlanPage");
-    return CommonViewAysncValueWidget<ShowPlanModel>(
-        value: ref.watch(showPlanViewModelProvider),
-        viewWidget: (data) {
-          return Scaffold(
+    //ShowPlanViewModel viewModel = ref.watch(showPlanViewModelProvider.notifier);
+    final state = ref.watch(showPlanViewModelProvider);
+    return state.when(
+      loading: () => const SizedBox(
+        child: CircularProgressIndicator(),
+      ),
+      // todo
+      error: (err, stack) => SizedBox(
+        child: Text('Error: $err'),
+      ),
+      data: (data) {
+        return MaterialApp(
+          home: Scaffold(
             appBar: AppBar(
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back_ios_sharp),
+                onPressed: () => back(context), //追加
+              ),
               title: Text(
                 _turnUpTitle(data.planTitle),
                 style: TextStyle(fontSize: 12.5.sp),
@@ -40,8 +52,10 @@ class ShowPlanPage extends ConsumerWidget {
               ),
             ),
             backgroundColor: Design.mainCOLOR,
-          );
-        });
+          ),
+        );
+      },
+    );
   }
 
   List<Widget> _makeScheduleWidgets(BuildContext context, ShowPlanModel data) {
@@ -175,6 +189,10 @@ class ShowPlanPage extends ConsumerWidget {
       );
     }
     return widgets;
+  }
+
+  void back(BuildContext context) {
+    context.pop();
   }
 
   // タイトルを折り返す

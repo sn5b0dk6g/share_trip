@@ -27,11 +27,11 @@ class MyPageTabModelConverter
   MyPageTabModel fromJson(Map<String, dynamic> json) {
     final postFromJson = json['post'] as Iterable<dynamic>;
     final likeFromJson = json['like'] as Iterable<dynamic>;
-    final downloadFromJson = json['download'] as Iterable<dynamic>;
+    final dowmloadFromJson = json['download'] as Iterable<dynamic>;
 
     final timeLineList = List<TabToListModel>.from(postFromJson);
     final followPlanList = List<TabToListModel>.from(likeFromJson);
-    final rankingFromJsonList = List<TabToListModel>.from(downloadFromJson);
+    final rankingFromJsonList = List<TabToListModel>.from(dowmloadFromJson);
 
     return MyPageTabModel(
       post: timeLineList,

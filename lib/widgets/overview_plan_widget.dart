@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_trip/models/common/tab_to_list/tab_to_list_model.dart';
@@ -174,7 +173,7 @@ class PlanWidget extends StatelessWidget {
           ),
         ],
       ),
-    );;
+    );
   }
 
   Future<void> _load() async {

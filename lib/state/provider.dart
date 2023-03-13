@@ -9,7 +9,7 @@ import 'package:share_trip/repository/home/home_repository_impl.dart';
 import 'package:share_trip/repository/show_plan/show_plan_repository.dart';
 import 'package:share_trip/repository/show_plan/show_plan_repository_impl.dart';
 import 'package:share_trip/view_model/home/home_view_model.dart';
-import 'package:share_trip/view_model/my_page/follow_page_view_model.dart';
+import 'package:share_trip/view_model/my_page/follow_list_view_model.dart';
 import 'package:share_trip/view_model/my_page/my_page_view_model.dart';
 import 'package:share_trip/view_model/show_plan/show_plan_view_model.dart';
 
@@ -48,12 +48,12 @@ final myPageViewModelProvider =
         (ref) => MyPageViewModel(ref: ref));
 
 // todo
-final followPageFutureProvider = FutureProvider.autoDispose
+final followListFutureProvider = FutureProvider.autoDispose
     .family<List<UserModel>, String>((ref, tabName) async {
-  return ref.read(followPageViewModelProvider).fetchList(tabName);
+  return ref.read(followListViewModelProvider).fetchList(tabName);
 });
-final followPageViewModelProvider =
-    Provider<FollowPageViewModel>((ref) => FollowPageViewModel(ref: ref));
+final followListViewModelProvider =
+    Provider<FollowListViewModel>((ref) => FollowListViewModel(ref: ref));
 
 /*
 * プラン表示画面

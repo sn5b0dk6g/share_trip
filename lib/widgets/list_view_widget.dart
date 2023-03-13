@@ -6,7 +6,7 @@ class ListViewWidget<T, R> extends StatelessWidget {
   const ListViewWidget({
     super.key,
     this.asyncValue,
-    this.items,
+    this.getItemsForListView,
     required this.viewWidget,
     this.asyncValueList,
     this.separatorHeight = 10.0,
@@ -14,7 +14,7 @@ class ListViewWidget<T, R> extends StatelessWidget {
 
   final AsyncValue<T>? asyncValue;
   final AsyncValue<List<T>>? asyncValueList;
-  final List<R> Function(T)? items;
+  final List<R> Function(T)? getItemsForListView;
   final Widget Function(R) viewWidget;
   final double separatorHeight;
 
@@ -29,7 +29,7 @@ class ListViewWidget<T, R> extends StatelessWidget {
       // todo
       error: (err, stack) => Text('Error: $err'),
       data: (data) {
-        final List<R> localItems = asyncValue != null ? items!(data as T) : data as List<R>;
+        final List<R> localItems = asyncValue != null ? getItemsForListView!(data as T) : data as List<R>;
         final int itemCnt = localItems.length;
         return Scaffold(
           // swipe to refresh

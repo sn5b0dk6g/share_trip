@@ -10,7 +10,7 @@ import 'package:share_trip/utils/design.dart';
 import 'package:share_trip/utils/message.dart';
 import 'package:share_trip/view_model/home/home_view_model.dart';
 import 'package:share_trip/widgets/list_view_widget.dart';
-import 'package:share_trip/widgets/plan_widget.dart';
+import 'package:share_trip/widgets/overview_plan_widget.dart';
 import 'package:share_trip/widgets/tab_to_list_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -111,7 +111,7 @@ class HomePage extends ConsumerWidget {
   {
     return ListViewWidget<HomeModel, TabToListModel>(
       asyncValue: ref.watch(homeViewModelProvider),
-      items: items,
+      getItemsForListView: items,
       viewWidget: (item) => PlanWidget(
         item: item,
         onTapAction: (context, tabToListModel) => context.push(
